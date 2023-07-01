@@ -11,6 +11,7 @@ node_t* newNodeHelper(int data) {
 linked_list_t* createLinkedList() {
     linked_list_t* newList = (linked_list_t*)malloc(sizeof(linked_list_t));
     newList->head = NULL;
+    newList->tail = NULL;
     return newList;
 }
 
@@ -18,12 +19,18 @@ void appendToLinkedList(linked_list_t* list, int data) {
     node_t* newNode = newNodeHelper(data);
     if(list->head == NULL) {
         list->head = newNode;
+        list->tail = newNode;
     } else {
+        node_t* tail = list->tail;
+        tail->next = newNode;
+        list->tail = newNode;
+        /*
+        // Implementation without tail
         node_t* current_node = list->head;
         while(current_node->next != NULL) {
             current_node = current_node->next;
         }
-        current_node->next = newNode;
+        current_node->next = newNode;*/
     }
 }
 

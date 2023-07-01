@@ -6,7 +6,10 @@ int main() {
 
     appendToLinkedList(list, 1);
     appendToLinkedList(list, 2);
-    appendToLinkedList(list, 3);
+    appendToLinkedList(list, 5);
+    appendToLinkedList(list, 7);
+    appendToLinkedList(list, 17);
+    appendToLinkedList(list, 27);
 
     printLinkedList(list);
 

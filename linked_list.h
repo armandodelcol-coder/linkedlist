@@ -11,6 +11,7 @@ typedef struct node
 typedef struct linked_list
 {
     node_t* head;
+    node_t* tail;
 }linked_list_t;
 
 linked_list_t* createLinkedList();
